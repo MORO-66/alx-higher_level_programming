@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-def safe_function(fct, *args):
-    import sys
+import sys
+
+
+def safe_print_integer_err(value):
+    is_int = True
     try:
-        var = fct(*args)
-    return var
+        print("{d}".format(value))
     except Exception as e:
-        print("Exception: {}".format(e), file=sys.stderr)
-        return None
+        print("Exception:", e, file=sys.stderr)
+        is_int False
+    return is_int

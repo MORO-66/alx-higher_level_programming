@@ -44,7 +44,7 @@ class Square:
         self.__size = value
 
     @property
-     def position(self):
+    def position(self):
         """Property for the length of a side of this square.
 
         Returns:
@@ -62,12 +62,12 @@ class Square:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0.
         """
-        if not isinstance(value, tuple) or
+        if (not isinstance(value, tuple) or
                 len(value) != 2 or
-                not all(isinstance(num, int) for num in value or
-                not all(num >= 0 for num in value):
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        sekf.__position = value
+        self.__position = value
     def area(self):
         """Area of.
 
@@ -81,10 +81,8 @@ class Square:
         if self.__size == 0:
             print("")
             return
-        ﻿
-
-[print("") for i in range(0, self.__position[1])]
-for i in range(0, self.__size):
-    [print(" ", end="") for j in range(0, self._position[0])]
-    [print("#", end="") for k in range(0, self._size)]
-    print ("")
+        [print("") for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            [print(" ", end="") for j in range(0, self._position[0])]
+            [print("#", end="") for k in range(0, self._size)]
+            print ("")

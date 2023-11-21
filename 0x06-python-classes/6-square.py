@@ -51,7 +51,7 @@ class Square:
             int: The length of a side of the square.
         """
         return (self.__position)
-
+    @position.setter
     def position(self, value):
         """Setter for the length of a side of this square.
 

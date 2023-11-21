@@ -31,7 +31,7 @@ class Square:
         Returns:
             int: The length of a side of the square.
         """
-        return self._size
+        return self.__size
 
     @size.setter
     def size(self, value):
@@ -48,4 +48,4 @@ class Square:
             raise TypeError('size must be an integer')
         if value < 0:
             raise ValueError('size must be >= 0')
-        self._size = value
+        self.__size = value

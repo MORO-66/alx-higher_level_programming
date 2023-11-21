@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""1-square.py """
 
 class Square:
     """A class representing a square.
@@ -9,7 +8,7 @@ class Square:
     """
 
     def __init__(self, size):
-        """Constructor
+        """Initializes a Square instance.
 
         Args:
             size (int): The size of the square.

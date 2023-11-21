@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""3-square.py"""
+"""3-square.py."""
 
 
 class Square:

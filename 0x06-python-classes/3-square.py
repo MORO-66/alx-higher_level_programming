@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""3-square.py."""
+"""3-square.py"""
 
 
 class Square:
@@ -24,7 +24,6 @@ class Square:
         if size < 0:
             raise ValueError('size must be >= 0')
         self.__size = size
-
     def area(self):
         """Calculate the area of the square.
 

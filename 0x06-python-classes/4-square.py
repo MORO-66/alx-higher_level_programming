@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square module."""
 
+
 class Square:
     """Defines a square.
 
@@ -12,7 +13,8 @@ class Square:
         """Initialize the Square instance.
 
         Args:
-            size (int, optional): Length of a side of the square. Defaults to 0.
+            size (int, optional): Length of a side of the square.
+            Defaults to 0.
         """
         self.size = size
 
@@ -41,6 +43,7 @@ class Square:
         if value < 0:
             raise ValueError('size must be >= 0')
         self.__size = value
+
     def area(self):
         """Area of.
 

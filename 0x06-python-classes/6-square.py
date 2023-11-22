@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square module."""
 
+
 class Square:
     """Defines a square.
 
@@ -12,7 +13,8 @@ class Square:
         """Initialize the Square instance.
 
         Args:
-            size (int, optional): Length of a side of the square. Defaults to 0.
+            size (int, optional): Length of a side of the square.
+            Defaults to 0.
         """
         self.size = size
         self.position = position
@@ -51,6 +53,7 @@ class Square:
             int: The length of a side of the square.
         """
         return (self.__position)
+
     @position.setter
     def position(self, value):
         """Setter for the length of a side of this square.
@@ -68,6 +71,7 @@ class Square:
                 not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
+        
     def area(self):
         """Area of.
 
@@ -85,4 +89,4 @@ class Square:
         for i in range(0, self.__size):
             [print(" ", end="") for j in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
-            print ("")
+            print("")

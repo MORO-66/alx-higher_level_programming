@@ -66,7 +66,7 @@ class Rectangle:
         """
             setter function for the privaribute height
             Args:
-                value (int): new height 
+                value (int): new height.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")

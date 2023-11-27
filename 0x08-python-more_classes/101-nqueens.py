@@ -3,6 +3,7 @@
 
 from sys import argv, exit
 
+
 def place(N, row, col, result):
     """ Place queens recursively """
     while col < N:
@@ -18,6 +19,7 @@ def place(N, row, col, result):
         result.pop()
     return
 
+
 def isvalid(row, col, result):
     """ Check if the position is valid """
     diag1 = [l[0] + l[1] for l in result]
@@ -27,6 +29,7 @@ def isvalid(row, col, result):
     if row in rows or col in cols or row + col in diag1 or col - row in diag2:
         return False
     return True
+
 
 if __name__ == "__main__":
     length = len(argv)

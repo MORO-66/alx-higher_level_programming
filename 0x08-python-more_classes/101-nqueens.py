@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-""" puzzle queen challenge
-"""
+""" Puzzle queen challenge """
+
 from sys import argv, exit
 
-
 def place(N, row, col, result):
-    """ place queens recursively """
+    """ Place queens recursively """
     while col < N:
         if isvalid(row, col, result):
             result.append([row, col])
@@ -19,14 +18,13 @@ def place(N, row, col, result):
         result.pop()
     return
 
-
 def isvalid(row, col, result):
-    """ check if the position is valid """
-    diag1 = [l[0]+l[1] for l in result]
-    diag2 = [l[1]-l[0] for l in result]
+    """ Check if the position is valid """
+    diag1 = [l[0] + l[1] for l in result]
+    diag2 = [l[1] - l[0] for l in result]
     cols = [l[1] for l in result]
     rows = [l[0] for l in result]
-    if row in rows or col in cols or row+col in diag1 or col-row in diag2:
+    if row in rows or col in cols or row + col in diag1 or col - row in diag2:
         return False
     return True
 
@@ -35,7 +33,7 @@ if __name__ == "__main__":
     if length != 2:
         print("Usage: nqueens N")
         exit(1)
-    if argv[1].isdigit() is False:
+    if not argv[1].isdigit():
         print("N must be a number")
         exit(1)
     N = int(argv[1])
